@@ -1,3 +1,32 @@
-<p>
-  routing works!
-</p>
+<ul class="flex-container">
+    <li class="flex-item">
+        1. Create a <code>routing.module</code> by hand<br> 
+        2. Take a look at app.module.ts<br> 
+        3. create a constant that hold the routes
+    </li>
+    <i (click)="hint = !hint" class="fa fa-question-circle"></i>
+
+    <li class="flex-item hint" *ngIf="hint">
+<pre>
+
+{{"import { NgModule } from '@angular/core';"}}
+{{"import { Routes, RouterModule } from '@angular/router';"}}
+
+{{"import { SearchComponent } from './search/search.component';"}}
+
+{{" const routes: Routes = ["}}
+{{"  { path: 'search', component: SearchComponent },"}}
+{{"  { path: '**', redirectTo: '/search' } "}}
+<!-- -->
+{{" ]; "}}
+
+{{"@NgModule({"}}
+{{"  imports: [RouterModule.forRoot(routes)],"}}
+{{"  exports: [RouterModule],"}}
+{{"  providers: []"}}
+{{"})"}}
+{{"export class WorkshopRoutingModule { }"}}
+
+</pre>
+    </li>
+</ul>
