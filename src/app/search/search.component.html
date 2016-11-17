@@ -1,0 +1,33 @@
+<ul class="flex-container">
+    <li class="flex-item">
+        1. Generate a <code>search</code> component with angular-cli<br> 
+        2. use this <code>search</code> component in the app.component view<br> 
+    </li>
+    <i (click)="hint = !hint" class="fa fa-question-circle"></i>
+
+    <li class="flex-item hint" *ngIf="hint">
+<pre>
+$ ng generate component search
+
+...
+&lt;input type="text" placeholder="Search Music..." (keyup)="searchMusic(searchStr)" [(ngModel)]="searchStr" &gt;
+...
+
+...
+{{"import { SpotifyService } from '../../shared/spotify.service';"}}
+...
+{{"searchMusic(str: string) {"}}
+{{"    if (str.length !== 0) {"}}
+{{"         this._spotify.searchArtists(this.searchStr)"}}
+{{"            .subscribe(res => {"}}
+{{"              console.log(res);"}}
+{{"              this.searchResult = res.artists;"}}
+{{"         });"}}
+<!--{{"        } else {"}}
+{{"          this.searchResult = null;"}}-->
+{{"    }"}}
+{{"}"}}
+
+</pre>
+    </li>
+</ul>

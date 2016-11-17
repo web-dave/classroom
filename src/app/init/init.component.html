@@ -1,0 +1,11 @@
+<ul class="flex-container">
+    <li class="flex-item">
+        1. Start a new Project<br>
+        2. choose scss as csspreprocessor<br>
+        3. define a prefix<br>
+    </li>
+    <i (click)="hint = !hint" class="fa fa-question-circle"></i>
+    <li class="flex-item hint" *ngIf="hint" >
+        <code >$ ng new ng2jumpstart --style=scss --prefix=my</code>
+    </li>
+</ul>

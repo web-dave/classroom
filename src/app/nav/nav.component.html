@@ -1,0 +1,94 @@
+<nav class="main-menu">
+  <ul>
+    <li>
+      <a [class]="(activeRoute === 'preparation')?'active':''"  (click)="setActiveLink('preparation')">
+        <i class="fa fa-cogs fa-2x"></i>
+        <span class="nav-text">
+          Preparation
+        </span>
+      </a>
+    </li>
+
+    <li>
+      <a [class]="(activeRoute === 'init')?'active':''"  (click)="setActiveLink('init')">
+        <i class="fa fa-home fa-2x"></i>
+        <span class="nav-text">
+          App
+        </span>
+      </a>
+    </li>
+
+    <li>
+      <a [class]="(activeRoute === 'nav')?'active':''"  (click)="setActiveLink('nav')">
+        <i class="fa fa-bars fa-2x"></i>
+        <span class="nav-text">
+          nav.component
+        </span>
+      </a>
+    </li>
+
+    <li>
+      <a [class]="(activeRoute === 'spotify')?'active':''"  (click)="setActiveLink('spotify')">
+        <i class="fa fa-music fa-2x"></i>
+        <span class="nav-text">
+          spotify.service
+        </span>
+      </a>
+    </li>
+
+    <li >
+      <a [class]="(activeRoute === 'search')?'active':''"  (click)="setActiveLink('search')">
+        <i class="fa fa-search fa-2x"></i>
+        <span class="nav-text">
+          search.component
+        </span>
+      </a>
+    </li>
+
+    <li>
+      <a [class]="(activeRoute === 'routing')?'active':''"  (click)="setActiveLink('routing')">
+        <i class="fa fa-code-fork fa-2x"></i>
+        <span class="nav-text">
+          routing
+        </span>
+      </a>
+    </li>
+
+    <li>
+      <a [class]="(activeRoute === 'artist')?'active':''"  (click)="setActiveLink('artist')">
+        <i class="fa fa-user fa-2x"></i>
+        <span class="nav-text">
+          artist.componnet
+        </span>
+      </a>
+    </li>
+
+    <li>
+      <a [class]="(activeRoute === 'inout')?'active':''"  (click)="setActiveLink('inout')">
+        <i class="fa fa-exchange fa-2x"></i>
+        <span class="nav-text">
+          Input / Output
+        </span>
+      </a>
+    </li>
+
+    <li>
+      <a [class]="(activeRoute === 'album')?'active':''"  (click)="setActiveLink('album')">
+        <i class="fa fa-headphones fa-2x"></i>
+        <span class="nav-text">
+          album.component
+        </span>
+      </a>
+    </li>
+
+    <li>
+      <a [class]="(activeRoute === 'pipe')?'active':''" (click)="setActiveLink('pipe')">
+        <i class="fa fa-filter fa-2x"></i>
+        <span class="nav-text">
+          pipe
+        </span>
+      </a>
+    </li>
+
+  </ul>
+</nav>

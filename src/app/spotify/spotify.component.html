@@ -1,0 +1,29 @@
+<ul class="flex-container">
+    <li class="flex-item">
+        1. Create a <code>shared</code> folder<br> 
+        2. Generate a <code>spotify</code> service in this shared folder with angular-cli<br>
+    </li>
+    <i (click)="hint = !hint" class="fa fa-question-circle"></i>
+
+    <li class="flex-item hint" *ngIf="hint">
+<pre>
+$ ng generate service shared/spotify
+
+...
+{{"import { Http } from '@angular/http';"}}
+{{"import 'rxjs/add/operator/map';"}}
+...
+{{"searchArtists(str: string) {"}}
+{{"    let url = `${this.restRoot}search?offset=0&limit=20&type=artist&market=US&query=${str}`;"}}
+{{"    return this._http.get(url)"}}
+{{"      .map(res => res.json());"}}
+{{"}"}}
+
+https://api.spotify.com/v1/
+search?offset=0&limit=20&type=artist&market=US&query=:str
+artists/:id
+artists/:id/albums
+albums/:id
+</pre>
+    </li>
+</ul>
