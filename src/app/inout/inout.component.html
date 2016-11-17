@@ -1,3 +1,30 @@
-<p>
-  inout works!
-</p>
+<ul class="flex-container">
+    <li class="flex-item">
+        1. Generate a <code>album-preview</code> component with angular-cli<br> 
+        2. every album in the artist.component should render in this (*ngFor="let album of albums") <br> 
+        3. use input into/output in album-preview<br>
+    </li>
+    <!--<i (click)="hint = !hint" class="fa fa-question-circle"></i>-->
+
+    <li class="flex-item hint" >
+<pre>
+$ ng generate component artist
+
+&lt;album-preview [myInput]="inputInput"  (myOutput)="onSelectAlbum($event)" &gt;&lt;album-preview&gt;
+
+{{"import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';"}}
+...
+{{"export class InoutComponent implements OnInit, OnChanges { "}}
+{{"@Input() myInput: string;"}}
+{{"@Output() myOutput = new EventEmitter();"}}
+
+...
+{{" this.myOutput.emit(this.album.id);"}}
+...
+{{"ngOnChanges(changes) {"}}
+    {{"if (changes.myInput) {...}"}}
+{{"}"}}
+
+</pre>
+    </li>
+</ul>

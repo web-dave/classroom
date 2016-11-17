@@ -1,3 +1,29 @@
-<p>
-  pipe works!
-</p>
+<ul class="flex-container">
+    <li class="flex-item">
+        1. Generate a <code>duration</code> pipe in folder shared with angular-cli<br> 
+        2. the duration should be displayed wellformed (3:15)<br>
+    </li>
+    <!--<i (click)="hint = !hint" class="fa fa-question-circle"></i>-->
+
+    <li class="flex-item hint" >
+<pre>
+$ ng generate pipe shared/duration
+
+...
+
+
+  {{"transform(value: any, args?: any): any { "}}
+    {{" let s = value / 1000; "}}
+    {{" let minuten: number = Math.floor(s / 60); "}}
+    {{" let sekunden: any = Math.round(s - (minuten * 60)); "}}
+   {{" if (sekunden < 10) { "}}
+     {{" sekunden = `0${sekunden}`; "}}
+   {{"} "}}
+
+    {{"return `${minuten}:${sekunden}`; "}}
+  {{"} "}}
+ 
+
+</pre>
+    </li>
+</ul>
