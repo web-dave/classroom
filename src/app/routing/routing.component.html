@@ -4,9 +4,9 @@
         2. Take a look at app.module.ts<br> 
         3. create a constant that hold the routes
     </li>
-    <!--<i (click)="hint = !hint" class="fa fa-question-circle"></i>-->
+    <i (click)="hint = !hint" class="fa fa-question-circle"></i>
 
-    <li class="flex-item hint">
+    <li class="flex-item hint" *ngIf="hint" >
 <pre>
 
 {{"import { NgModule } from '@angular/core';"}}

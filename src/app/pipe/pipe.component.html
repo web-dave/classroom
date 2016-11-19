@@ -3,9 +3,9 @@
         1. Generate a <code>duration</code> pipe in folder shared with angular-cli<br> 
         2. the duration should be displayed wellformed (3:15)<br>
     </li>
-    <!--<i (click)="hint = !hint" class="fa fa-question-circle"></i>-->
+    <i (click)="hint = !hint" class="fa fa-question-circle"></i>
 
-    <li class="flex-item hint" >
+    <li class="flex-item hint" *ngIf="hint" >
 <pre>
 $ ng generate pipe shared/duration
 

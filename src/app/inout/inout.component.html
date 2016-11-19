@@ -4,9 +4,9 @@
         2. every album in the artist.component should render in this (*ngFor="let album of albums") <br> 
         3. use input into/output in album-preview<br>
     </li>
-    <!--<i (click)="hint = !hint" class="fa fa-question-circle"></i>-->
+    <i (click)="hint = !hint" class="fa fa-question-circle"></i>
 
-    <li class="flex-item hint" >
+    <li class="flex-item hint" *ngIf="hint" >
 <pre>
 $ ng generate component artist
 

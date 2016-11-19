@@ -4,9 +4,9 @@
         2. click search.component artist brings you to this <code>artist</code> component<br> 
         3. show all album<br>
     </li>
-    <!--<i (click)="hint = !hint" class="fa fa-question-circle"></i>-->
+    <i (click)="hint = !hint" class="fa fa-question-circle"></i>
 
-    <li class="flex-item hint" >
+    <li class="flex-item hint" *ngIf="hint" >
 <pre>
 $ ng generate component artist
 

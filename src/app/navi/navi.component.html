@@ -3,9 +3,9 @@
         1. Generate a <code>nav</code> component with angular-cli<br> 
         2. Use this new <code>nav</code> component in the <code>appComponnet</code>        view<br>
     </li>
-    <!--<i (click)="hint = !hint" class="fa fa-question-circle"></i>-->
+    <i (click)="hint = !hint" class="fa fa-question-circle"></i>
 
-    <li class="flex-item hint" >
+    <li class="flex-item hint" *ngIf="hint" >
         <code>$ ng generate component nav</code>
     </li>
 </ul>
